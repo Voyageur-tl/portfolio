@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 10px; /*Améliore la lisibilité sur mobile*/
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     color: #333;
@@ -19,9 +19,49 @@ section {
     padding: 20px;
     background: white;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*Ajout subtil d'un hover sur les sections*/
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+section + section {
+    margin-top: 30px; /*Ajout d'un léger espacement entre les sections pour une meilleure séparation visuelle*/
 }
 
 h2 {
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px; /*Ajout un léger espacement entre les paragraphes*/
+}
+
+ul li {
+    margin-bottom: 8px; /*Aére les listes pour une meilleure lisibilité*/
+}
+
+/*Ajout d'un style pour les liens, même s'il n'y en a pas encore, pour préparer le terrain*/
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
 }

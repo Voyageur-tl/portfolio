@@ -11,15 +11,19 @@ nav {
     -webkit-backdrop-filter: blur(4px);  /*Ajoute un effet de flou derrière la navigation (Safari, iOS Safari)*/
     backdrop-filter: blur(4px); /*Chrome, Firefox, Edge*/
     padding: 10px;
-    text-align: center;
     position: sticky; /*Rend la navigation collante pour un accès facile lors du scroll*/
     top: 0;
     z-index: 1000; /*Assure que la navigation reste au-dessus du contenu*/
+
+    /*Ajout pour menu horizontal*/
+    display: flex;
+    justify-content: center; /*Centre les éléments de navigation horizontalement*/
+    align-items: center; /*Aligne verticalement les liens pour une meilleure esthétique*/
+    flex-wrap: wrap; /*Permet aux liens de se réorganiser sur plusieurs lignes sur les petits écrans*/
 }
 
 nav a {
-    display: inline-block; /*Améliore la lisibilité...*/
-    padding: 8px 5px; /*...du menu sur mobile*/
+    padding: 8px 5px;
     color: white;
     margin: 0 15px;
     text-decoration: none;
@@ -89,4 +93,14 @@ footer {
     background: #222;
     color: white;
     margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /*Empile les liens de navigation sur les petits écrans pour une meilleure accessibilité*/
+    }
+
+    nav a {
+        margin: 8px 0; /*Ajoute de l'espace entre les liens de navigation sur les petits écrans*/
+    }
 }

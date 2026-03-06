@@ -6,6 +6,31 @@ body {
     color: #333;
 }
 
+nav {
+    background: rgba(34, 34, 34, 0.95); /*Rend la navigation légèrement transparente pour un look plus moderne*/
+    -webkit-backdrop-filter: blur(4px);  /*Ajoute un effet de flou derrière la navigation (Safari, iOS Safari)*/
+    backdrop-filter: blur(4px); /*Chrome, Firefox, Edge*/
+    padding: 10px;
+    text-align: center;
+    position: sticky; /*Rend la navigation collante pour un accès facile lors du scroll*/
+    top: 0;
+    z-index: 1000; /*Assure que la navigation reste au-dessus du contenu*/
+}
+
+nav a {
+    display: inline-block; /*Améliore la lisibilité...*/
+    padding: 8px 5px; /*...du menu sur mobile*/
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0066ff; /*Ajout d'un effet de survol pour les liens de navigation*/
+}
+
 header {
     background: #222;
     color: white;
